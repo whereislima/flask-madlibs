@@ -10,30 +10,39 @@
 
 <body>
   <h1>Madlibs</h1>
-  <form action="">
+  <!-- <form action="/story">
     <p>
       <label for="">place:</label>
-      <input type="text">
+      <input type="text" name="place">
     </p>
     <p>
       <label for="">noun:</label>
-      <input type="text">
+      <input type="text" name="noun">
     </p>
     <p>
       <label for="">verb:</label>
-      <input type="text">
+      <input type="text" name="verb">
     </p>
     <p>
       <label for="">adjective:</label>
-      <input type="text">
+      <input type="text" name="adjective">
     </p>
     <p>
       <label for="">plural_noun:</label>
-      <input type="text">
+      <input type="text" name="plural-noun">
     </p>
     <p>
       <input type="submit">
     </p>
+  </form> -->
+
+  <form action="/story">
+    {% for prompt in prompts %} 
+      <p>
+        {{prompt}}: <input name="{{prompt}}"> 
+      </p>
+    {% endfor %}
+    <button>Submit</button>
   </form>
 </body>
 
